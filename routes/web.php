@@ -30,6 +30,9 @@ Route::get('/admin/products', 'App\Http\Controllers\Admin\AdminProductController
 Route::get('/admin/products/add', 'App\Http\Controllers\Admin\AdminProductController@add')->name("admin.product.add");
 Route::post("/admin/products/store", "App\Http\Controllers\Admin\AdminProductController@store")->name("admin.product.store");
 
+Route::get('/admin/users', 'App\Http\Controllers\Admin\AdminUserController@index')->name("admin.user.index");
+Route::get('/admin/users/{id}', 'App\Http\Controllers\Admin\AdminUserController@show')->name("admin.user.show");
+
 Route::get('/products', 'App\Http\Controllers\MenuController@index')->name("menu.index");
 Route::get('/products/{id}', 'App\Http\Controllers\MenuController@show')->name("menu.show");
 
@@ -41,6 +44,9 @@ Route::middleware('admin')->group(function () {
     Route::delete('/admin/products/{id}/delete', 'App\Http\Controllers\Admin\AdminProductController@delete')->name("admin.product.delete");
     Route::get('/admin/products/{id}/edit', 'App\Http\Controllers\Admin\AdminProductController@edit')->name("admin.product.edit");
     Route::put('/admin/products/{id}/update', 'App\Http\Controllers\Admin\AdminProductController@update')->name("admin.product.update");
+
+    Route::get('/admin/users', 'App\Http\Controllers\Admin\AdminUserController@index')->name("admin.user.index");
+    Route::get('/admin/users/{id}', 'App\Http\Controllers\Admin\AdminUserController@show')->name("admin.user.show");
 });
 
 Route::get('/cart', 'App\Http\Controllers\CartController@index')->name("cart.index");

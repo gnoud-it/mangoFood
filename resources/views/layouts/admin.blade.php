@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
         crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
     <link href="{{ asset('./plugins/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" />
     <link href="{{ asset('./plugins/bootstrap-icons/font/bootstrap-icons.css') }}" rel="stylesheet" />
     <link href="{{ asset('/css/admin.css') }}" rel="stylesheet" />
@@ -33,6 +34,9 @@
                 </li>
                 <li><a href="{{ route('admin.product.add') }}" class="nav-link text-white">
                         <i class="bi bi-plus-lg"></i>&nbsp;&nbsp;Thêm sản phẩm</a>
+                </li>
+                <li><a href="{{ route('admin.user.index') }}" class="nav-link text-white">
+                        <i class="bi bi-people-fill"></i>&nbsp;&nbsp;Quản lý khách hàng</a>
                 </li>
                 <li><a href="{{ route('myaccount.orders') }}" class="nav-link text-white">
                         <i class="bi bi-receipt"></i>&nbsp;&nbsp;Đơn hàng</a>
@@ -117,6 +121,32 @@
             updateClock();
             window.setInterval("updateClock()", 1);
         }
+    </script>
+
+    <script>
+        var xValues = ["Gà rán", "Hamburger", "Khoai tây chiên", "Nước có gas", "Nước trái cây"];
+        var yValues = [495, 450, 404, 240, 220];
+        var barColors = ["red", "green", "blue", "orange", "brown"];
+
+        new Chart("myChart", {
+            type: "bar",
+            data: {
+                labels: xValues,
+                datasets: [{
+                    backgroundColor: barColors,
+                    data: yValues
+                }]
+            },
+            options: {
+                legend: {
+                    display: false
+                },
+                title: {
+                    display: true,
+                    text: "Thống kê doanh thu trong vòng 1 tháng"
+                }
+            }
+        });
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous">
     </script>

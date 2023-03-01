@@ -68,17 +68,6 @@ class User extends Authenticatable
         $this->attributes['id'] = $id;
     }
 
-
-
-    public function setImage($image)
-    {
-        $this->attributes['image'] = $image;
-    }
-    public function getImage()
-    {
-        return $this->attributes['image'];
-    }
-
     public function setName($name)
     {
         $this->attributes['name'] = $name;

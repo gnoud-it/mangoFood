@@ -30,7 +30,7 @@
                             </h3>
                             <p>{{ $viewData['product']->getDescription() }}</p>
                             <h5 class="text-danger">
-                                {{ $viewData['product']->getPrice() }} đ&nbsp;-&nbsp;<span
+                                {{ $viewData['product']->getPrice() }} ₫&nbsp;-&nbsp;<span
                                     class="text-success fst-italic fs-6">Còn hàng</span>
                             </h5>
                         </div>
