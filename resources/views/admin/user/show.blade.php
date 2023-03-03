@@ -21,6 +21,7 @@
                             <a href="{{ route('admin.user.index') }}" class="card-text text-decoration-none">
                                 <small class="text-index"><i class="bi bi-chevron-left"></i>&nbsp;Quay lại</small>
                             </a>
+
                         </div>
                     </div>
                 </div>

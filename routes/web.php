@@ -47,6 +47,7 @@ Route::middleware('admin')->group(function () {
 
     Route::get('/admin/users', 'App\Http\Controllers\Admin\AdminUserController@index')->name("admin.user.index");
     Route::get('/admin/users/{id}', 'App\Http\Controllers\Admin\AdminUserController@show')->name("admin.user.show");
+    Route::delete('/admin/users/{id}/delete', 'App\Http\Controllers\Admin\AdminUserController@delete')->name("admin.user.delete");
 });
 
 Route::get('/cart', 'App\Http\Controllers\CartController@index')->name("cart.index");

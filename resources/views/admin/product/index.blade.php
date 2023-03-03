@@ -33,7 +33,7 @@
                             <td><a href="{{ asset('/storage/' . $product->getImage()) }}" target="window"><img
                                         src="{{ asset('/storage/' . $product->getImage()) }}" class="img-fluid w-25"></a>
                             </td>
-                            <td>{{ $product->getPrice() }}</td>
+                            <td>{{ $product->getPrice() }},000 ₫</td>
                             <td>
                                 <a class="btn btn-index rounded-circle"
                                     href="{{ route('admin.product.edit', ['id' => $product->getId()]) }}">

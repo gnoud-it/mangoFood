@@ -54,7 +54,8 @@
                                 <h5 class="card-title text-index">{{ $product->getName() }}</h5>
                                 <h6 class="card-title text-muted small pt-2">{{ $product->getDescription() }}
                                 </h6>
-                                <h6 class="card-title text-danger fw-bold pt-2 pb-3 fs-5">{{ $product->getPrice() }} ₫</h6>
+                                <h6 class="card-title text-danger fw-bold pt-2 pb-3 fs-5">{{ $product->getPrice() }},000 ₫
+                                </h6>
                                 <a class="btn btn-index" href="{{ route('menu.show', ['id' => $product->getId()]) }}"><i
                                         class="bi bi-basket2"></i>&nbsp;Chi tiết sản phẩm</a>
                             </div>

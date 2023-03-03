@@ -8,7 +8,7 @@
             </div>
             <div class="card-body">
                 <b>Ngày:</b> {{ $order->getCreatedAt() }}<br />
-                <b>Tổng:</b> {{ $order->getTotal() }} ₫<br />
+                <b>Tổng:</b> {{ $order->getTotal() }},000 ₫<br />
                 <table class="table table-bordered table-striped text-center mt-3">
                     <thead>
                         <tr>
@@ -29,7 +29,7 @@
                                         {{ $item->getProduct()->getName() }}
                                     </a>
                                 </td>
-                                <td>{{ $item->getPrice() }} ₫</td>
+                                <td>{{ $item->getPrice() }},000 ₫</td>
                                 <td>{{ $item->getQuantity() }}</td>
                                 <td class="fst-italic text-success fw-semibold">Đang giao</td>
                             </tr>

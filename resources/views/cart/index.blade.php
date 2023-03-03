@@ -28,7 +28,7 @@
                                 <td>{{ $product->getName() }}</td>
                                 <td> <img src="{{ asset('/storage/' . $product->getImage()) }}" class="img-fluid w-25">
                                 </td>
-                                <td>{{ $product->getPrice() }} ₫</td>
+                                <td>{{ $product->getPrice() }},000 ₫</td>
                                 <td>{{ session('products')[$product->getId()] }}</td>
                             </tr>
                         @endforeach
@@ -37,7 +37,7 @@
                 <div class="row">
                     <div class="text-end">
                         <a class="btn mb-2"><b class=" text-index">Tổng
-                                cộng:</b>&nbsp;&nbsp;{{ $viewData['total'] }}&nbsp;₫</a>
+                                cộng:</b>&nbsp;&nbsp;{{ $viewData['total'] }},000 ₫</a>
                         @if (count($viewData['products']) > 0)
                             <a href="{{ route('cart.purchase') }}" class="btn btn-index text-white mb-2">Đặt hàng</a>
                             <a href="{{ route('cart.delete') }}">
